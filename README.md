@@ -10,6 +10,8 @@
   * Task 2
   * Task 3
   * Task 4
+* [Tableau Dashboard](#tableau-dasboard)
+
 
 <!-- INTRODUCTION -->
 ## Introduction
@@ -79,8 +81,10 @@ ORDER BY d.dept_no;  `
 
 SQL Code:
 
-` DROP PROCEDURE IF EXISTS filter_salary;
-DELIMITER $$
+` DROP PROCEDURE IF EXISTS filter_salary; `
+
+
+`DELIMITER $$
 CREATE PROCEDURE filter_salary (IN p_min_salary FLOAT, IN p_max_salary FLOAT)
 BEGIN
 SELECT 
@@ -99,8 +103,6 @@ END$$
 DELIMITER ; `
 
 
-\
-\
 
 **Complete Tableau Dashboard** 
 [Tap here to view the dynamic dashboard](https://public.tableau.com/views/Employeedatainsightsbasedongender/Dashboard1?:language=en-GB&:display_count=y&:origin=viz_share_link)
