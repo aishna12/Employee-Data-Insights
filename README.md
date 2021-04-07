@@ -22,6 +22,8 @@ Data stored in the Database [file](https://www.dropbox.com/s/3czfpe0njsq868q/emp
 
 <!-- TASKS -->
 * **Task 1 : A visualization that provides a breakdown between the male and female employees working in the company each year, starting from 1990.** 
+
+
  ` SELECT 
     YEAR(d.from_date) AS calendar_year,
     e.gender,
@@ -35,6 +37,8 @@ HAVING calendar_year >= 1990
 ORDER BY calendar_year ASC; `
 
 * **Task 2: Compare the number of male managers to the number of female managers from different departments for each year, starting from 1990.**
+
+
 ` SELECT d.dept_name, ee.gender , dm.emp_no, dm.from_date, dm.to_date, e.calendar_year,
 CASE 
 	WHEN YEAR(dm.to_date) >=e.calendar_year AND YEAR(dm.from_date) <= calendar_year THEN 1 ELSE 0
@@ -46,6 +50,8 @@ CROSS JOIN t_dept_manager dm JOIN t_departments d ON dm.dept_no = d.dept_no
                             ORDER BY dm.emp_no, calendar_year; `
                             
 * **Task 3: Compare the average salary of female versus male employees in the entire company until year 2002, and add a filter allowing you to see that per each department.**
+
+
 ` SELECT 
     e.gender,
     d.dept_name,
@@ -65,6 +71,8 @@ ORDER BY d.dept_no;  `
 
 * **Create an SQL stored procedure that will allow you to obtain the average male and female salary per department within a certain salary range. Let this range be defined by two values the user can insert when calling the procedure.**
 
+
+
 ` DROP PROCEDURE IF EXISTS filter_salary;
 
 DELIMITER $$
@@ -83,7 +91,7 @@ FROM
     WHERE s.salary BETWEEN p_min_salary AND p_max_salary
 GROUP BY d.dept_no, e.gender;
 END$$
-DELIMITER ;    `
+DELIMITER ; `
 
 ` CALL filter_salary(50000,90000);  `
 
