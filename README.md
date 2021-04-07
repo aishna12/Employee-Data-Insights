@@ -75,7 +75,6 @@ ORDER BY d.dept_no;  `
 
 
 ` DROP PROCEDURE IF EXISTS filter_salary;
-
 DELIMITER $$
 CREATE PROCEDURE filter_salary (IN p_min_salary FLOAT, IN p_max_salary FLOAT)
 BEGIN
