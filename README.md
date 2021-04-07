@@ -21,6 +21,7 @@ Data stored in the Database [file](https://www.dropbox.com/s/3czfpe0njsq868q/emp
 *  **Tableau Public Desktop**: To visiualize the obtained results for the task
 
 <!-- TASKS -->
+## Tasks
 * **Task 1 : A visualization that provides a breakdown between the male and female employees working in the company each year, starting from 1990.** 
 
 
@@ -92,6 +93,8 @@ FROM
 GROUP BY d.dept_no, e.gender;
 END$$
 DELIMITER ; `
+
+
 
 ` CALL filter_salary(50000,90000);  `
 
