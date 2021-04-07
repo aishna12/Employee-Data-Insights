@@ -25,7 +25,7 @@ Data stored in the Database [file](https://www.dropbox.com/s/3czfpe0njsq868q/emp
 <!-- TASKS -->
 ## Tasks
 * **Task 1 : A visualization that provides a breakdown between the male and female employees working in the company each year, starting from 1990.** 
-  SQL Code:
+     SQL Code:
 
  ` SELECT 
     YEAR(d.from_date) AS calendar_year, 
@@ -42,7 +42,7 @@ ORDER BY calendar_year ASC; `
 
 * **Task 2: Compare the number of male managers to the number of female managers from different departments for each year, starting from 1990.**
 
-SQL Code:
+     SQL Code:
 
 ` SELECT d.dept_name, ee.gender , dm.emp_no, dm.from_date, dm.to_date, e.calendar_year,
 CASE 
@@ -58,7 +58,7 @@ CROSS JOIN t_dept_manager dm JOIN t_departments d ON dm.dept_no = d.dept_no
 
 * **Task 3: Compare the average salary of female versus male employees in the entire company until year 2002, and add a filter allowing you to see that per each department.**
 
-SQL Code:
+     SQL Code:
 
 ` SELECT 
     e.gender,
@@ -79,7 +79,7 @@ ORDER BY d.dept_no;  `
 
 * **Task 4: An SQL stored procedure that will allow you to obtain the average male and female salary per department within a certain salary range. Let this range be defined by two values the user can insert when calling the procedure.**
 
-SQL Code:
+     SQL Code:
 
 ` DROP PROCEDURE IF EXISTS filter_salary; `
 
@@ -105,7 +105,7 @@ DELIMITER ; `
 
 
 ## Complete Tableau Dashboard 
-[Tap here to view the dynamic dashboard](https://public.tableau.com/views/Employeedatainsightsbasedongender/Dashboard1?:language=en-GB&:display_count=y&:origin=viz_share_link)
+[Click here to view the dynamic dashboard](https://public.tableau.com/views/Employeedatainsightsbasedongender/Dashboard1?:language=en-GB&:display_count=y&:origin=viz_share_link)
 
 <div class='tableauPlaceholder' id='viz1617795390480' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Em&#47;Employeedatainsightsbasedongender&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Employeedatainsightsbasedongender&#47;Dashboard1' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Em&#47;Employeedatainsightsbasedongender&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /></object></div>                
 
