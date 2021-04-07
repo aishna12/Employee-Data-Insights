@@ -25,9 +25,9 @@ Data stored in the Database [file](https://www.dropbox.com/s/3czfpe0njsq868q/emp
 * **Task 1 : A visualization that provides a breakdown between the male and female employees working in the company each year, starting from 1990.** 
 
 
- ` SELECT 
-    YEAR(d.from_date) AS calendar_year,
-    e.gender,
+ ` SELECT \
+    YEAR(d.from_date) AS calendar_year, \
+    e.gender, \
     COUNT(e.emp_no) AS num_of_employees
 FROM
     t_employees e
