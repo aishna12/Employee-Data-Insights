@@ -100,7 +100,7 @@ FROM
     WHERE s.salary BETWEEN p_min_salary AND p_max_salary
 GROUP BY d.dept_no, e.gender;
 END$$
-DELIMITER ; `
+DELIMITER; `
 
 
 
